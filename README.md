@@ -67,6 +67,21 @@ Extracted from the model logits:
 ---
 
 ## Limitations
-- Did **not explore advanced feature engineering techniques**.
-- **More sophisticated models** (e.g., gradient boosting, neural nets) were not tested.
-- Results are **baseline** and likely to improve with deeper architectures and better features.
+- Feature engineering was primarily limited to **confidence-based metrics** derived from logits (e.g., entropy, confidence, margins), which may not capture nuanced patterns distinguishing members from non-members.
+- The attack model was restricted to **logistic regression**, which lacks the capacity to model complex decision boundaries.
+- Did not explore **non-linear relationships** or interactions between features that could enhance predictive performance.
+- Computational and time constraints prevented testing of **more sophisticated feature extraction pipelines** or ensemble models.
+
+---
+
+## Future Work
+- Explore **advanced feature engineering**, including:
+  - Gradient-based features
+  - Temporal/logit evolution (if applicable)
+  - Class-wise statistical embeddings
+- Incorporate **non-linear models** such as:
+  - **Random Forests**
+  - **XGBoost**
+  - **Multi-layer Perceptrons (MLPs)**
+  - **Maximum Likelihood Estimators (MLE)**
+- Evaluate feature importance and model interpretability to identify which logits-derived features contribute most to attack success.
