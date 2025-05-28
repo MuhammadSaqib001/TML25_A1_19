@@ -37,6 +37,30 @@ Extracted from the model logits:
 
 ---
 
+## Important Code Segments
+
+The key components of this repository are organized under the `train/` directory. These scripts form the backbone of the model training and feature extraction pipeline:
+
+### `script.py`
+This is the main entry point for training. It handles:
+- Loading datasets (public and private)
+- Extracting features
+- Training models (e.g., Logistic Regression)
+- Evaluating performance on the test set
+
+### `feature_extraction.py`
+Responsible for per-sample feature extraction. It transforms raw inputs into a suitable format for traditional machine learning models.
+
+### Jupyter Notebook
+For exploratory data analysis (EDA), a Jupyter notebook is provided. It includes:
+- Dataset overview and summary statistics
+- Visualizations of label distributions and membership patterns
+- Sanity checks and data inspection
+
+> This separation ensures a clean distinction between core model logic and experimental data analysis.
+
+---
+
 ## 📈 Results
 
 | Metric | Value |
